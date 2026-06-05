@@ -78,20 +78,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "MySite" },
-      { name: "description", content: "MySite ✨
-A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
+      { name: "description", content: "A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "MySite" },
-      { property: "og:description", content: "MySite ✨
-A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
+      { property: "og:description", content: "A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "MySite" },
-      { name: "twitter:description", content: "MySite ✨
-A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1780695971991-file_000000006adc71f4af2d712c16971050.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1780695971991-file_000000006adc71f4af2d712c16971050.webp" },
+      { name: "twitter:description", content: "A modern digital portfolio designed to showcase my skills, projects, and professional journey. Built with creativity and purpose." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1780700765729-file_000000006adc71f4af2d712c16971050.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1780700765729-file_000000006adc71f4af2d712c16971050.webp" },
     ],
     links: [
       {
