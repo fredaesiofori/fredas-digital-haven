@@ -1,11 +1,15 @@
-import { Award, BookOpen, Cloud } from "lucide-react";
+import { useState } from "react";
+import { Award, BookOpen, Cloud, X } from "lucide-react";
+import awsCert from "@/assets/aws-cert.png.asset.json";
 
 const certs = [
   {
     icon: Cloud,
-    title: "AWS Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    status: "In Progress",
+    title: "AWS Cloud Practitioner Essentials",
+    issuer: "AWS Training & Certification",
+    status: "Completed",
+    date: "May 29, 2026",
+    image: awsCert.url,
   },
   {
     icon: BookOpen,
@@ -22,6 +26,8 @@ const certs = [
 ];
 
 export function Certifications() {
+  const [preview, setPreview] = useState<string | null>(null);
+
   return (
     <section id="certifications" className="py-24 lg:py-32 bg-secondary/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -35,29 +41,70 @@ export function Certifications() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {certs.map((c) => (
-            <div
-              key={c.title}
-              className="p-6 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant transition-all text-center"
-            >
-              <div className="size-16 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow mb-4">
-                <c.icon className="size-8 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold mb-1">{c.title}</h3>
-              <div className="text-sm text-muted-foreground mb-3">{c.issuer}</div>
-              <span
-                className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                  c.status === "In Progress"
-                    ? "bg-accent/15 text-accent-foreground border border-accent/30"
-                    : "bg-primary/10 text-primary"
+          {certs.map((c) => {
+            const clickable = !!c.image;
+            return (
+              <div
+                key={c.title}
+                onClick={() => c.image && setPreview(c.image)}
+                className={`p-6 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant transition-all text-center ${
+                  clickable ? "cursor-pointer hover:-translate-y-1" : ""
                 }`}
               >
-                {c.status}
-              </span>
-            </div>
-          ))}
+                {c.image ? (
+                  <div className="rounded-xl overflow-hidden border border-border mb-4 bg-white">
+                    <img
+                      src={c.image}
+                      alt={`${c.title} certificate`}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                ) : (
+                  <div className="size-16 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow mb-4">
+                    <c.icon className="size-8 text-primary-foreground" />
+                  </div>
+                )}
+                <h3 className="font-semibold mb-1">{c.title}</h3>
+                <div className="text-sm text-muted-foreground mb-3">
+                  {c.issuer}
+                  {c.date ? ` • ${c.date}` : ""}
+                </div>
+                <span
+                  className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                    c.status === "In Progress"
+                      ? "bg-accent/15 text-accent-foreground border border-accent/30"
+                      : "bg-primary/10 text-primary"
+                  }`}
+                >
+                  {c.status}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
+
+      {preview && (
+        <div
+          onClick={() => setPreview(null)}
+          className="fixed inset-0 z-50 bg-background/90 backdrop-blur-lg flex items-center justify-center p-6 animate-fade-in-up"
+        >
+          <button
+            onClick={() => setPreview(null)}
+            aria-label="Close"
+            className="absolute top-6 right-6 size-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-secondary"
+          >
+            <X className="size-5" />
+          </button>
+          <img
+            src={preview}
+            alt="Certificate preview"
+            className="max-w-full max-h-[85vh] rounded-2xl shadow-elegant border border-border"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }
