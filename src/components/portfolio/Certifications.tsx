@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Award, BookOpen, Cloud, X } from "lucide-react";
 import awsCert from "@/assets/aws-cert.png.asset.json";
+import googleCert from "@/assets/google-ads-cert.jpg.asset.json";
 
 const certs = [
   {
@@ -12,14 +13,16 @@ const certs = [
     image: awsCert.url,
   },
   {
-    icon: BookOpen,
-    title: "Virtual Assistant Foundations",
-    issuer: "Online Training",
+    icon: Award,
+    title: "Google Ads for Beginners",
+    issuer: "Coursera",
     status: "Completed",
+    date: "Jun 4, 2026",
+    image: googleCert.url,
   },
   {
-    icon: Award,
-    title: "Google Workspace Essentials",
+    icon: BookOpen,
+    title: "Virtual Assistant Foundations",
     issuer: "Online Training",
     status: "Completed",
   },
