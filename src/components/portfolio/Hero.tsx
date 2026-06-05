@@ -1,6 +1,7 @@
 import { ArrowRight, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import cvAsset from "@/assets/cv-freda-ofori.pdf.asset.json";
 
 export function Hero() {
   return (
@@ -51,7 +52,7 @@ export function Hero() {
               <a href="#contact">Hire Me</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
-              <a href="/cv-freda-ofori.pdf" download>
+              <a href={cvAsset.url} download="Freda_Ofori_Esi_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 size-4" /> Download CV
               </a>
             </Button>
