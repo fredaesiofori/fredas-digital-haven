@@ -1,4 +1,16 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import havenScreenshot from "@/assets/digital-haven-screenshot.png.asset.json";
+
+const featured = {
+  title: "Freda's Digital Haven",
+  category: "Personal Portfolio Website",
+  desc: "A modern personal portfolio showcasing my skills, services, projects, certifications, and contact information as a Virtual Assistant and aspiring Cloud Practitioner.",
+  image: havenScreenshot.url,
+  live: "https://fredas-digital-haven.lovable.app/",
+  repo: "https://github.com/fredaesiofori",
+  tags: ["React", "TailwindCSS", "Responsive"],
+};
 
 const projects = [
   {
@@ -43,17 +55,81 @@ export function Portfolio() {
           </p>
         </div>
 
+        {/* Featured project */}
+        <div className="mb-10 group relative rounded-3xl overflow-hidden border border-border bg-gradient-card shadow-soft hover:shadow-elegant transition-all">
+          <div className="absolute top-5 left-5 z-10 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider shadow-elegant">
+            ★ Featured
+          </div>
+          <div className="grid lg:grid-cols-2 gap-0">
+            <a
+              href={featured.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block aspect-[16/10] lg:aspect-auto overflow-hidden bg-secondary"
+            >
+              <img
+                src={featured.image}
+                alt={`${featured.title} screenshot`}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+              <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                {featured.category}
+              </div>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-3">
+                {featured.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-5">
+                {featured.desc}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {featured.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="bg-gradient-primary text-primary-foreground shadow-elegant hover:shadow-glow hover:opacity-95 transition-all"
+                >
+                  <a href={featured.live} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 size-4" /> Live Demo
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="border-2">
+                  <a href={featured.live} target="_blank" rel="noopener noreferrer">
+                    View Project <ArrowUpRight className="ml-1 size-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="ghost">
+                  <a href={featured.repo} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 size-4" /> GitHub
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <div
               key={p.title}
-              className="group relative p-8 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant transition-all overflow-hidden"
+              className="group relative p-8 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all overflow-hidden"
             >
               <div className="absolute -right-12 -top-12 size-40 rounded-full bg-gradient-primary opacity-10 group-hover:opacity-20 transition-opacity" />
 
               <div className="flex items-start justify-between mb-4 relative">
                 <span className="text-6xl font-display font-bold text-gradient/40 opacity-30">
-                  0{i + 1}
+                  0{i + 2}
                 </span>
                 <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1 transition-all" />
               </div>
