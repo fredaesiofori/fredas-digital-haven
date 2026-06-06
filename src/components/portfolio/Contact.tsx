@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Linkedin, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,6 +10,7 @@ const EMAIL = "fredaesiofori905@gmail.com";
 const PHONE_DISPLAY = "+233 596 168 684";
 const PHONE_DIGITS = "233596168684";
 const LINKEDIN = "https://www.linkedin.com/in/freda-ofori-363235351";
+const GITHUB = "https://github.com/fredaesiofori";
 
 export function Contact() {
   const [sending, setSending] = useState(false);
@@ -76,7 +77,7 @@ export function Contact() {
               href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-4 p-5 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant transition-all"
+              className="flex items-start gap-4 p-5 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant hover:-translate-y-0.5 transition-all"
             >
               <div className="size-11 rounded-xl bg-gradient-primary flex items-center justify-center shrink-0">
                 <Linkedin className="size-5 text-primary-foreground" />
@@ -84,6 +85,21 @@ export function Contact() {
               <div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">LinkedIn</div>
                 <div className="font-medium text-sm">Freda Ofori</div>
+              </div>
+            </a>
+
+            <a
+              href={GITHUB}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 p-5 rounded-2xl bg-gradient-card border border-border shadow-soft hover:shadow-elegant hover:-translate-y-0.5 transition-all"
+            >
+              <div className="size-11 rounded-xl bg-gradient-primary flex items-center justify-center shrink-0">
+                <Github className="size-5 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">GitHub</div>
+                <div className="font-medium text-sm">fredaesiofori</div>
               </div>
             </a>
           </div>

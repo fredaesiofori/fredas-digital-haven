@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,9 +13,18 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="size-9 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+            className="size-9 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all"
           >
             <Linkedin className="size-4" />
+          </a>
+          <a
+            href="https://github.com/fredaesiofori"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="size-9 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all"
+          >
+            <Github className="size-4" />
           </a>
           <a
             href="mailto:fredaesiofori905@gmail.com"

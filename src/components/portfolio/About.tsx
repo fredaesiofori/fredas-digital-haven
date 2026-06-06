@@ -1,4 +1,5 @@
-import profile from "@/assets/profile.jpg";
+import profileAsset from "@/assets/freda-profile.png.asset.json";
+const profile = profileAsset.url;
 import { CheckCircle2 } from "lucide-react";
 
 const skills = [
