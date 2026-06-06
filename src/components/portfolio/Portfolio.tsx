@@ -1,16 +1,30 @@
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import havenScreenshot from "@/assets/digital-haven-screenshot.png.asset.json";
+import smartspendImg from "@/assets/smartspend.png.asset.json";
 
-const featured = {
-  title: "Freda's Digital Haven",
-  category: "Personal Portfolio Website",
-  desc: "A modern personal portfolio showcasing my skills, services, projects, certifications, and contact information as a Virtual Assistant and aspiring Cloud Practitioner.",
-  image: havenScreenshot.url,
-  live: "https://fredas-digital-haven.lovable.app/",
-  repo: "https://github.com/fredaesiofori",
-  tags: ["React", "TailwindCSS", "Responsive"],
-};
+const featuredProjects = [
+  {
+    title: "Freda's Digital Haven",
+    category: "Personal Portfolio Website",
+    desc: "A modern personal portfolio showcasing my skills, services, projects, certifications, and contact information as a Virtual Assistant and aspiring Cloud Practitioner.",
+    image: havenScreenshot.url,
+    imageFit: "object-top" as const,
+    live: "https://fredas-digital-haven.lovable.app/",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["React", "TailwindCSS", "Responsive"],
+  },
+  {
+    title: "SmartSpend",
+    category: "Finance & Budgeting Application",
+    desc: "A modern personal finance and budgeting application that helps users track expenses, manage budgets, monitor spending habits, and make smarter financial decisions through a clean, user-friendly interface.",
+    image: smartspendImg.url,
+    imageFit: "object-center" as const,
+    live: "https://smartspend905.lovable.app/",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["React", "TailwindCSS", "Finance", "Mobile-Friendly"],
+  },
+];
 
 const projects = [
   {
@@ -55,69 +69,77 @@ export function Portfolio() {
           </p>
         </div>
 
-        {/* Featured project */}
-        <div className="mb-10 group relative rounded-3xl overflow-hidden border border-border bg-gradient-card shadow-soft hover:shadow-elegant transition-all">
-          <div className="absolute top-5 left-5 z-10 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider shadow-elegant">
-            ★ Featured
-          </div>
-          <div className="grid lg:grid-cols-2 gap-0">
-            <a
-              href={featured.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative block aspect-[16/10] lg:aspect-auto overflow-hidden bg-secondary"
+        {/* Featured projects */}
+        <div className="space-y-8 mb-10">
+          {featuredProjects.map((featured) => (
+            <div
+              key={featured.title}
+              className="group relative rounded-3xl overflow-hidden border border-border bg-gradient-card shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all"
             >
-              <img
-                src={featured.image}
-                alt={`${featured.title} screenshot`}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                {featured.category}
+              <div className="absolute top-5 left-5 z-10 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider shadow-elegant">
+                ★ Featured
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-3">
-                {featured.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-5">
-                {featured.desc}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {featured.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <Button
-                  asChild
-                  className="bg-gradient-primary text-primary-foreground shadow-elegant hover:shadow-glow hover:opacity-95 transition-all"
+              <div className="grid lg:grid-cols-2 gap-0">
+                <a
+                  href={featured.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block aspect-[16/10] lg:aspect-auto overflow-hidden bg-secondary"
                 >
-                  <a href={featured.live} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 size-4" /> Live Demo
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="border-2">
-                  <a href={featured.live} target="_blank" rel="noopener noreferrer">
-                    View Project <ArrowUpRight className="ml-1 size-4" />
-                  </a>
-                </Button>
-                <Button asChild variant="ghost">
-                  <a href={featured.repo} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 size-4" /> GitHub
-                  </a>
-                </Button>
+                  <img
+                    src={featured.image}
+                    alt={`${featured.title} screenshot`}
+                    loading="lazy"
+                    className={`absolute inset-0 w-full h-full object-cover ${featured.imageFit} transition-transform duration-700 group-hover:scale-105`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    {featured.category}
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-3">
+                    {featured.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-5">
+                    {featured.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {featured.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      asChild
+                      className="bg-gradient-primary text-primary-foreground shadow-elegant hover:shadow-glow hover:opacity-95 transition-all"
+                    >
+                      <a href={featured.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 size-4" /> Live Demo
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="border-2">
+                      <a href={featured.live} target="_blank" rel="noopener noreferrer">
+                        View Project <ArrowUpRight className="ml-1 size-4" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="ghost">
+                      <a href={featured.repo} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 size-4" /> GitHub
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
