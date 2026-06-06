@@ -1,16 +1,30 @@
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import havenScreenshot from "@/assets/digital-haven-screenshot.png.asset.json";
+import smartspendImg from "@/assets/smartspend.png.asset.json";
 
-const featured = {
-  title: "Freda's Digital Haven",
-  category: "Personal Portfolio Website",
-  desc: "A modern personal portfolio showcasing my skills, services, projects, certifications, and contact information as a Virtual Assistant and aspiring Cloud Practitioner.",
-  image: havenScreenshot.url,
-  live: "https://fredas-digital-haven.lovable.app/",
-  repo: "https://github.com/fredaesiofori",
-  tags: ["React", "TailwindCSS", "Responsive"],
-};
+const featuredProjects = [
+  {
+    title: "Freda's Digital Haven",
+    category: "Personal Portfolio Website",
+    desc: "A modern personal portfolio showcasing my skills, services, projects, certifications, and contact information as a Virtual Assistant and aspiring Cloud Practitioner.",
+    image: havenScreenshot.url,
+    imageFit: "object-top" as const,
+    live: "https://fredas-digital-haven.lovable.app/",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["React", "TailwindCSS", "Responsive"],
+  },
+  {
+    title: "SmartSpend",
+    category: "Finance & Budgeting Application",
+    desc: "A modern personal finance and budgeting application that helps users track expenses, manage budgets, monitor spending habits, and make smarter financial decisions through a clean, user-friendly interface.",
+    image: smartspendImg.url,
+    imageFit: "object-center" as const,
+    live: "https://smartspend905.lovable.app/",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["React", "TailwindCSS", "Finance", "Mobile-Friendly"],
+  },
+];
 
 const projects = [
   {
