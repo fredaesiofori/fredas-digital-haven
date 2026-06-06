@@ -6,13 +6,13 @@ import cvAsset from "@/assets/cv-freda-ofori.pdf.asset.json";
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10 opacity-40"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 -z-10 w-full h-full object-cover opacity-40"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-background/60 to-background" />
 
