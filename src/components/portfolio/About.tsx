@@ -24,6 +24,7 @@ export function About() {
               width={800}
               height={800}
               loading="lazy"
+              decoding="async"
               className="w-full h-auto"
             />
           </div>

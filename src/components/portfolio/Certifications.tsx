@@ -60,6 +60,7 @@ export function Certifications() {
                       src={c.image}
                       alt={`${c.title} certificate`}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-auto"
                     />
                   </div>
@@ -103,6 +104,7 @@ export function Certifications() {
           <img
             src={preview}
             alt="Certificate preview"
+            decoding="async"
             className="max-w-full max-h-[85vh] rounded-2xl shadow-elegant border border-border"
             onClick={(e) => e.stopPropagation()}
           />
