@@ -104,6 +104,7 @@ export function Certifications() {
           <img
             src={preview}
             alt="Certificate preview"
+            decoding="async"
             className="max-w-full max-h-[85vh] rounded-2xl shadow-elegant border border-border"
             onClick={(e) => e.stopPropagation()}
           />
