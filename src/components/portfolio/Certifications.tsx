@@ -60,6 +60,7 @@ export function Certifications() {
                       src={c.image}
                       alt={`${c.title} certificate`}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-auto"
                     />
                   </div>
