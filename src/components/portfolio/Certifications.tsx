@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Award, BookOpen, Cloud, X } from "lucide-react";
 import awsCert from "@/assets/aws-cert.png.asset.json";
+import awsBadge from "@/assets/aws-knowledge-badge.png.asset.json";
 import googleCert from "@/assets/google-ads-cert.jpg.asset.json";
 
 const certs = [
@@ -11,6 +12,13 @@ const certs = [
     status: "Completed",
     date: "May 29, 2026",
     image: awsCert.url,
+  },
+  {
+    icon: Cloud,
+    title: "AWS Knowledge: Cloud Essentials",
+    issuer: "AWS Training & Certification",
+    status: "Completed",
+    image: awsBadge.url,
   },
   {
     icon: Award,
