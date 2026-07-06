@@ -2,6 +2,9 @@ import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import havenScreenshot from "@/assets/digital-haven-screenshot.png.asset.json";
 import smartspendImg from "@/assets/smartspend.png.asset.json";
+import eventRegImg from "@/assets/event-registration.png.asset.json";
+import awsCapstoneImg from "@/assets/aws-capstone.png.asset.json";
+import taskflowImg from "@/assets/taskflow.png.asset.json";
 
 const featuredProjects = [
   {
@@ -24,21 +27,39 @@ const featuredProjects = [
     repo: "https://github.com/fredaesiofori",
     tags: ["Lovable", "GitHub", "Finance", "Cloud-Hosted"],
   },
-];
-
-const projects = [
   {
-    title: "TaskFlow",
-    category: "Personal Project — July 2026",
-    desc: "A fully serverless to-do list application on AWS Free Tier. S3 static hosting, API Gateway REST endpoints, Lambda Node.js functions, and DynamoDB persistence with least-privilege IAM and CloudWatch monitoring.",
-    tag: "AWS",
+    title: "Event Registration System",
+    category: "Full-Stack Web Application",
+    desc: "A modern event discovery and booking platform for professional tech conferences and workshops. Features seamless event registrations with verified secure QR boarding passes, live PDF exports, and real-time dashboard tracking.",
+    image: eventRegImg.url,
+    imageFit: "object-top" as const,
+    live: "https://event-registration-system-freda-creations.vercel.app?_vercel_share=32GtryuP1h2Q4yZQhuTelWTZZwQ29vLH",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["React", "Vercel", "QR Codes", "PDF Export"],
   },
   {
     title: "AWS Cloud Architecture Capstone",
     category: "Team Project — June 2026",
-    desc: "Contributed to the design and deployment of a production-style AWS architecture with secure GitHub Actions workflows using OIDC authentication, HTTPS, and CloudFront distribution.",
-    tag: "Cloud",
+    desc: "Designed and deployed a production-style AWS architecture using CloudFront, ACM, ALB, Auto Scaling groups across multiple Availability Zones, S3 static hosting, and CloudWatch monitoring — with secure GitHub Actions CI/CD via OIDC authentication.",
+    image: awsCapstoneImg.url,
+    imageFit: "object-center" as const,
+    live: "https://lnkd.in/dZzAeVVF",
+    repo: "https://lnkd.in/dZzAeVVF",
+    tags: ["AWS", "CloudFront", "ALB", "GitHub Actions"],
   },
+  {
+    title: "TaskFlow — Serverless Task Manager",
+    category: "Personal Project — July 2026",
+    desc: "A fully serverless to-do list application built entirely on AWS managed services within the Free Tier. Static frontend on Amazon S3, REST API on API Gateway + Lambda, and DynamoDB for persistent storage, with least-privilege IAM and CloudWatch monitoring.",
+    image: taskflowImg.url,
+    imageFit: "object-top" as const,
+    live: "http://mysimple-to-do.s3-website-us-east-1.amazonaws.com",
+    repo: "https://github.com/fredaesiofori",
+    tags: ["AWS", "Lambda", "DynamoDB", "API Gateway", "S3"],
+  },
+];
+
+const projects = [
   {
     title: "Serverless Application on AWS",
     category: "Team Project — June 2026",
