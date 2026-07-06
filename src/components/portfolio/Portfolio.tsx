@@ -28,28 +28,28 @@ const featuredProjects = [
 
 const projects = [
   {
-    title: "LinkedIn Content Writing Samples",
-    category: "Content & Branding",
-    desc: "Professional LinkedIn posts and articles crafted to grow personal brands and drive engagement.",
-    tag: "Writing",
-  },
-  {
-    title: "Data Entry & Spreadsheet Organization",
-    category: "Admin Support",
-    desc: "Organized customer databases and sales tracking spreadsheets with formulas, filters, and clean formatting.",
-    tag: "Excel",
-  },
-  {
-    title: "Virtual Assistant Task Simulation",
-    category: "Virtual Assistance",
-    desc: "End-to-end VA workflow: inbox triage, calendar booking, travel research, and client follow-ups.",
-    tag: "VA",
-  },
-  {
-    title: "AWS Cloud Practitioner Learning",
-    category: "Cloud Computing",
-    desc: "Hands-on AWS labs covering core services, billing, security basics, and the shared responsibility model.",
+    title: "TaskFlow",
+    category: "Personal Project — July 2026",
+    desc: "A fully serverless to-do list application on AWS Free Tier. S3 static hosting, API Gateway REST endpoints, Lambda Node.js functions, and DynamoDB persistence with least-privilege IAM and CloudWatch monitoring.",
     tag: "AWS",
+  },
+  {
+    title: "AWS Cloud Architecture Capstone",
+    category: "Team Project — June 2026",
+    desc: "Contributed to the design and deployment of a production-style AWS architecture with secure GitHub Actions workflows using OIDC authentication, HTTPS, and CloudFront distribution.",
+    tag: "Cloud",
+  },
+  {
+    title: "Serverless Application on AWS",
+    category: "Team Project — June 2026",
+    desc: "Collaborated on building a serverless AWS application using Lambda and API Gateway, with infrastructure automation and deployment of a Python-based function using Terraform.",
+    tag: "Serverless",
+  },
+  {
+    title: "Docker Containerization Project",
+    category: "Personal Project — 2026",
+    desc: "Containerized a task management application using Docker and Docker Compose, then deployed workloads on Amazon EC2 using Kubernetes Deployments and Services.",
+    tag: "Docker",
   },
 ];
 
