@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Award, BookOpen, Cloud, X } from "lucide-react";
+import { Award, BookOpen, Briefcase, Cloud, X } from "lucide-react";
 import awsCert from "@/assets/aws-cert.png.asset.json";
 import awsBadge from "@/assets/aws-knowledge-badge.png.asset.json";
 import googleCert from "@/assets/google-ads-cert.jpg.asset.json";
@@ -27,6 +27,13 @@ const certs = [
     status: "Completed",
     date: "Jun 4, 2026",
     image: googleCert.url,
+  },
+  {
+    icon: Briefcase,
+    title: "Project Manager Job Simulation",
+    issuer: "Siemens / Forage",
+    status: "Completed",
+    date: "Jun 19, 2026",
   },
   {
     icon: BookOpen,
