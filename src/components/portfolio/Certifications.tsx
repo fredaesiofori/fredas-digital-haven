@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Award, BookOpen, Cloud, X } from "lucide-react";
+import { Award, BookOpen, Briefcase, Cloud, X } from "lucide-react";
 import awsCert from "@/assets/aws-cert.png.asset.json";
 import awsBadge from "@/assets/aws-knowledge-badge.png.asset.json";
 import googleCert from "@/assets/google-ads-cert.jpg.asset.json";
