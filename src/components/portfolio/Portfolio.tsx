@@ -17,12 +17,12 @@ const featuredProjects = [
   {
     title: "SmartSpend",
     category: "Finance & Budgeting Application",
-    desc: "A modern personal finance and budgeting application that helps users track expenses, manage budgets, monitor spending habits, and make smarter financial decisions through a clean, user-friendly interface.",
+    desc: "Architected a cloud-hosted expense management application, integrating a low-code development workspace with structured version control. Built and iterated through prompt-based development in Lovable, integrated with GitHub for automated repository synchronization and version tracking, and maintained structured project documentation throughout development.",
     image: smartspendImg.url,
     imageFit: "object-center" as const,
     live: "https://smartspend905.lovable.app/",
     repo: "https://github.com/fredaesiofori",
-    tags: ["React", "TailwindCSS", "Finance", "Mobile-Friendly"],
+    tags: ["Lovable", "GitHub", "Finance", "Cloud-Hosted"],
   },
 ];
 
