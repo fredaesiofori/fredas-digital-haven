@@ -29,6 +29,13 @@ const certs = [
     image: googleCert.url,
   },
   {
+    icon: Briefcase,
+    title: "Project Manager Job Simulation",
+    issuer: "Siemens / Forage",
+    status: "Completed",
+    date: "Jun 19, 2026",
+  },
+  {
     icon: BookOpen,
     title: "Virtual Assistant Foundations",
     issuer: "Online Training",
