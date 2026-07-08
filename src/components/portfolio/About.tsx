@@ -34,12 +34,9 @@ export function About() {
           <div className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
             About Me
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Cloud Engineer | AWS Cloud Practitioner | Digital Marketing
-            Specialist | Virtual Assistant
-            <br />
-            <span className="text-gradient">Building Cloud, Automation & AI Solutions</span>
-          </h2>
+          <p className="text-3xl lg:text-5xl font-bold leading-tight mb-6" style={{ whiteSpace: 'pre-wrap' }}>
+            Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant  Building Cloud, Automation & AI Solutions
+          </p>
 
           <div className="grid sm:grid-cols-2 gap-3">
             {skills.map((s) => (
