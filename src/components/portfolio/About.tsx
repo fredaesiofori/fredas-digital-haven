@@ -3,12 +3,12 @@ const profile = profileAsset.url;
 import { CheckCircle2 } from "lucide-react";
 
 const skills = [
+  "AWS Cloud Practitioner",
+  "Cloud Infrastructure & Automation",
+  "AI Solutions & Integration",
+  "Digital Marketing",
   "Virtual Assistance",
   "Data Entry & Admin Support",
-  "Microsoft Office (Word, Excel, PowerPoint)",
-  "Google Workspace",
-  "Social Media Management",
-  "Basic Cloud Computing (AWS)",
 ];
 
 export function About() {
@@ -20,7 +20,7 @@ export function About() {
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border bg-gradient-card">
             <img
               src={profile}
-            alt="Freda Ofori — Cloud Engineer & Digital Marketing Specialist"
+              alt="Freda Ofori — Cloud Engineer & Digital Marketing Specialist"
               width={800}
               height={800}
               loading="lazy"
@@ -40,9 +40,6 @@ export function About() {
             <br />
             <span className="text-gradient">Building Cloud, Automation & AI Solutions</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            I'm a Cloud Engineer, AWS Cloud Practitioner, Digital Marketing Specialist, and Virtual Assistant. I build cloud, automation, and AI solutions that help businesses stay organized, efficient, and ready to scale.
-          </p>
 
           <div className="grid sm:grid-cols-2 gap-3">
             {skills.map((s) => (
