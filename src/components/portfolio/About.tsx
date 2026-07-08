@@ -20,7 +20,7 @@ export function About() {
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border bg-gradient-card">
             <img
               src={profile}
-              alt="Freda Ofori — Virtual Assistant"
+            alt="Freda Ofori — Cloud Engineer & Digital Marketing Specialist"
               width={800}
               height={800}
               loading="lazy"
@@ -35,9 +35,10 @@ export function About() {
             About Me
           </div>
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Detail-oriented freelancer
+            Cloud Engineer | AWS Cloud Practitioner | Digital Marketing
+            Specialist | Virtual Assistant
             <br />
-            <span className="text-gradient">passionate about productivity</span>
+            <span className="text-gradient">Building Cloud, Automation & AI Solutions</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
             I'm a detail-oriented freelancer passionate about virtual assistance,
