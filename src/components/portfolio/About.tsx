@@ -41,10 +41,7 @@ export function About() {
             <span className="text-gradient">Building Cloud, Automation & AI Solutions</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            I'm a detail-oriented freelancer passionate about virtual assistance,
-            data management, and cloud computing. I help businesses stay organized
-            and efficient using modern digital tools — so founders and teams can
-            focus on what matters most.
+            I'm a Cloud Engineer, AWS Cloud Practitioner, Digital Marketing Specialist, and Virtual Assistant. I build cloud, automation, and AI solutions that help businesses stay organized, efficient, and ready to scale.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-3">
