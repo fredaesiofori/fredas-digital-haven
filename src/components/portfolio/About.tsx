@@ -40,9 +40,6 @@ export function About() {
             <br />
             <span className="text-gradient">Building Cloud, Automation & AI Solutions</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Building Cloud, Automation & AI Solutions.
-          </p>
 
           <div className="grid sm:grid-cols-2 gap-3">
             {skills.map((s) => (
