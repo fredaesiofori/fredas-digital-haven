@@ -23,14 +23,35 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Helping businesses stay organized, productive, and efficient using digital tools and cloud technologies.",
+          "Helping businesses stay organized, productive, and efficient using digital tools and cloud technologies. Explore featured projects including SmartSpend, TaskFlow, and AWS Cloud Architecture Capstone.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://fredas-digital-haven.lovable.app/" },
+      { property: "og:site_name", content: "Freda Ofori Portfolio" },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1782042374641-file_00000000fb3471f492e5d3678802024a.webp",
+      },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Freda Ofori — Virtual Assistant & Cloud Practitioner portfolio preview" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Freda Ofori — Virtual Assistant & Cloud Practitioner" },
+      {
+        name: "twitter:description",
+        content:
+          "Helping businesses stay organized, productive, and efficient with digital tools and cloud technologies.",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/dXpVpJFg7Fe4hgPpP3Z4eT21em82/social-images/social-1782042374641-file_00000000fb3471f492e5d3678802024a.webp",
+      },
+      { name: "twitter:image:alt", content: "Freda Ofori portfolio preview" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://fredas-digital-haven.lovable.app/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -39,6 +60,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
+
   component: Index,
 });
 
