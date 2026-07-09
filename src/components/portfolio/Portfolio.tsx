@@ -34,7 +34,7 @@ const featuredProjects = [
     image: eventRegImg.url,
     imageFit: "object-top" as const,
     live: "https://event-registration-system-freda-creations.vercel.app?_vercel_share=32GtryuP1h2Q4yZQhuTelWTZZwQ29vLH",
-    repo: "https://github.com/fredaesiofori",
+    repo: "https://github.com/fredaesiofori/event-registration-system.git",
     tags: ["React", "Vercel", "QR Codes", "PDF Export"],
   },
   {
@@ -44,7 +44,7 @@ const featuredProjects = [
     image: awsCapstoneImg.url,
     imageFit: "object-center" as const,
     live: "https://lnkd.in/dZzAeVVF",
-    repo: "https://lnkd.in/dZzAeVVF",
+    repo: "https://github.com/Aliu2211/azubi_capsotone_project.git",
     tags: ["AWS", "CloudFront", "ALB", "GitHub Actions"],
   },
   {
