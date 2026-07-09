@@ -13,17 +13,17 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Freda Ofori — Virtual Assistant & Aspiring Cloud Practitioner" },
+      { title: "Freda Ofori — Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant" },
       {
         name: "description",
         content:
-          "Freda Ofori — Virtual Assistant and aspiring AWS Cloud Practitioner helping businesses stay organized, productive, and efficient with digital tools.",
+          "Freda Ofori — Cloud Engineer, AWS Cloud Practitioner, Digital Marketing Specialist and Virtual Assistant building cloud, automation, and AI solutions for businesses.",
       },
-      { property: "og:title", content: "Freda Ofori — Virtual Assistant & Cloud Practitioner" },
+      { property: "og:title", content: "Freda Ofori — Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant" },
       {
         property: "og:description",
         content:
-          "Helping businesses stay organized, productive, and efficient using digital tools and cloud technologies. Explore featured projects including SmartSpend, TaskFlow, and AWS Cloud Architecture Capstone.",
+          "Cloud, automation, and AI solutions that help businesses stay organized, productive, and efficient. Explore featured projects including SmartSpend, TaskFlow, Digital Haven, and AWS Cloud Architecture Capstone.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://fredas-digital-haven.lovable.app/" },
@@ -35,13 +35,13 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Freda Ofori — Virtual Assistant & Cloud Practitioner portfolio preview" },
+      { property: "og:image:alt", content: "Freda Ofori — Cloud Engineer, Digital Marketing Specialist & Virtual Assistant portfolio preview" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Freda Ofori — Virtual Assistant & Cloud Practitioner" },
+      { name: "twitter:title", content: "Freda Ofori — Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant" },
       {
         name: "twitter:description",
         content:
-          "Helping businesses stay organized, productive, and efficient with digital tools and cloud technologies.",
+          "Cloud, automation, and AI solutions that help businesses stay organized, productive, and efficient.",
       },
       {
         name: "twitter:image",
