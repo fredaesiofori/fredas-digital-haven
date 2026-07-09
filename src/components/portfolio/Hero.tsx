@@ -28,9 +28,9 @@ export function Hero() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6">
             Hi, I'm <span className="text-gradient">Freda Ofori</span>
-            <br />
-            Virtual Assistant &<br />
-            <span className="text-gradient">Aspiring Cloud Practitioner</span>
+            <span className="block mt-2" style={{ whiteSpace: 'pre-wrap' }}>
+              Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant  Building Cloud, Automation & AI Solutions
+            </span>
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
