@@ -170,6 +170,10 @@
   box-shadow: var(--shadow-elegant);
 }
 
+@utility text-glow {
+  text-shadow: 0 0 20px var(--color-primary-glow), 0 0 40px var(--color-primary-glow);
+}
+
 @utility shadow-glow {
   box-shadow: var(--shadow-glow);
 }
