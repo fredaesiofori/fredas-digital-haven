@@ -26,7 +26,7 @@ export function Hero() {
             <span className="text-xs font-medium">Available for new projects</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] mb-6 text-glow">
             Hi, I'm <span className="text-gradient">Freda Ofori</span>
             <span className="block mt-2" style={{ whiteSpace: 'pre-wrap' }}>
               Cloud Engineer | AWS Cloud Practitioner | Digital Marketing Specialist | Virtual Assistant  Building Cloud, Automation & AI Solutions
