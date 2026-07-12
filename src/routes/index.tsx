@@ -1,14 +1,25 @@
+import { lazy, Suspense } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Services } from "@/components/portfolio/Services";
-import { Portfolio } from "@/components/portfolio/Portfolio";
-import { Certifications } from "@/components/portfolio/Certifications";
-import { Testimonials } from "@/components/portfolio/Testimonials";
-import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+import heroBg from "@/assets/hero-bg.webp";
+
+const Portfolio = lazy(() =>
+  import("@/components/portfolio/Portfolio").then((m) => ({ default: m.Portfolio })),
+);
+const Certifications = lazy(() =>
+  import("@/components/portfolio/Certifications").then((m) => ({ default: m.Certifications })),
+);
+const Testimonials = lazy(() =>
+  import("@/components/portfolio/Testimonials").then((m) => ({ default: m.Testimonials })),
+);
+const Contact = lazy(() =>
+  import("@/components/portfolio/Contact").then((m) => ({ default: m.Contact })),
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({
