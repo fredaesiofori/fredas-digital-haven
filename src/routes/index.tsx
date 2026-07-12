@@ -84,10 +84,12 @@ function Index() {
         <Hero />
         <About />
         <Services />
-        <Portfolio />
-        <Certifications />
-        <Testimonials />
-        <Contact />
+        <Suspense fallback={<div className="min-h-[400px]" />}>
+          <Portfolio />
+          <Certifications />
+          <Testimonials />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
       <Toaster position="top-center" />
