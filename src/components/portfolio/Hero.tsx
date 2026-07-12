@@ -1,20 +1,25 @@
 import { ArrowRight, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.webp";
+import heroBgWebp from "@/assets/hero-bg.webp";
+import heroBgJpg from "@/assets/hero-bg.jpg";
 import cvAsset from "@/assets/cv-freda-ofori.pdf.asset.json";
 
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      <img
-        src={heroBg}
-        alt=""
-        aria-hidden="true"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 -z-10 w-full h-full object-cover opacity-40"
-      />
+      <picture>
+        <source type="image/webp" srcSet={heroBgWebp} />
+        <img
+          src={heroBgJpg}
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 -z-10 w-full h-full object-cover opacity-40"
+        />
+      </picture>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-background/60 to-background" />
+
 
       <div className="absolute top-1/4 -left-20 size-72 rounded-full bg-primary/20 blur-3xl animate-float" />
       <div className="absolute bottom-1/4 -right-20 size-96 rounded-full bg-accent/20 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
