@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 import cvAsset from "@/assets/cv-freda-ofori.pdf.asset.json";
 
 export function Hero() {
